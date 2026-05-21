@@ -7,44 +7,33 @@
     <style>
         body {
             background: #000;
-            color: #fff;
+            color: #FF6600;
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
-            padding: 20px;
+            padding: 40px 20px;
         }
         h1 {
-            color: #ff6b00;
-            font-size: 2em;
+            font-size: 32px;
+            margin-bottom: 20px;
         }
-        .live {
-            color: #ff0000;
-            font-weight: bold;
-            animation: blink 1.5s infinite;
-        }
-        @keyframes blink { 50% { opacity: 0.5; } }
         audio {
-            width: 90%;
+            width: 100%;
             max-width: 400px;
-            margin: 20px 0;
+            margin-top: 30px;
+        }
+        p {
+            color: #fff;
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
-    <h1>🔥 CRUZ MANO 534 🔥</h1>
-    <p class="live">● AO VIVO 24H</p>
-    
-    <audio controls autoplay id="player">
-        <source src="https://corsproxy.io/?https://stream.zeno.fm/0ctt516rnhovv.m3u" type="audio/mpeg">
+    <h1>CRUZ MANO 534 - AO VIVO</h1>
+    <p>Se não tocar automático, aperta o play ▶️</p>
+    <audio controls autoplay>
+        <source src="https://0ctt516rnhovv.zeno.fm/radio.mp3" type="audio/mpeg">
         Seu navegador não suporta áudio.
     </audio>
-
-    <p>✅ Conexão Segura HTTPS - github.io</p>
-
-    <script>
-        document.getElementById('player').play().catch(e => {
-            console.log('Clique no play para ouvir!');
-        });
-    </script>
 </body>
 </html>
