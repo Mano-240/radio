@@ -1,20 +1,15 @@
 {
-  "name": "Rádio Cruz Mano 534",
-  "short_name": "Mano 534",
+  "name": "Mano Show",
+  "short_name": "Mano Show",
+  "description": "Rádio Mano Show - 24h no ar",
   "start_url": "/radio/",
-  "scope": "/radio/",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#ff6b00",
-  "description": "A rádio da quebrada ao vivo 24h",
+  "background_color": "#FF6600",
+  "theme_color": "#FF6600",
+  "orientation": "portrait",
   "icons": [
     {
-      "src": "icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "icon-512.png",
+      "src": "icon.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
