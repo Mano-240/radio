@@ -1,15 +1,14 @@
 {
-  "name": "Rádio Mano Show",
+  "name": "Web Rádio Mano Show",
   "short_name": "Mano Show",
   "description": "Se liga na mais nova mania Mano Show. Música boa 24h no ar!",
   "start_url": "/radio/",
   "scope": "/radio/",
   "display": "standalone",
   "orientation": "any",
-  "background_color": "#000000",
-  "theme_color": "#FF6600",
+  "background_color": "#00AA00",
+  "theme_color": "#00AA00",
   "lang": "pt-BR",
-  "id": "com.radiomanoshow.app",
   "icons": [
     {
       "src": "icon-192.png",
@@ -18,7 +17,7 @@
     },
     {
       "src": "icon-512.png",
-      "sizes": "512x512",
+      "sizes": "512x512", 
       "type": "image/png"
     }
   ]
