@@ -3,37 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rádio Mano Show - Ao Vivo</title>
+  <title>Mano Show</title>
+  <link rel="manifest" href="manifest.json">
   <style>
     body {
-      background: #000;
-      color: #fff;
+      background: #0d0d0d;
+      color: white;
       font-family: Arial, sans-serif;
       text-align: center;
       padding: 20px;
       margin: 0;
     }
+    .logo {
+      width: 180px;
+      height: 180px;
+      border-radius: 25px;
+      margin: 30px auto 10px;
+      box-shadow: 0 0 25px #00ff88;
+    }
     h1 {
-      color: #ff0000;
-      font-size: 2.5em;
-      margin-bottom: 10px;
+      font-size: 2.8rem;
+      margin: 10px 0;
+      color: #00ff88;
+      text-shadow: 0 0 10px #00ff88;
     }
     audio {
       width: 100%;
-      max-width: 500px;
-      margin: 30px auto;
-      display: block;
+      max-width: 400px;
+      margin-top: 25px;
+      border-radius: 50px;
     }
-  </style>
+ .logo {
+  width: 180px;
+  height: 180px;
+  border-radius: 25px;
+  margin: 30px auto 10px;
+  box-shadow: 0 0 25px #00ff88;
+} </style>
 </head>
 <body>
-  <h1>MANO SHOW - AO VIVO</h1>
-  <p>Clique no play para ouvir</p>
+  <img src="logo.png" alt="Mano Show" class="logo">
+  <h1>MANO SHOW</h1>
+  <p>A rádio que toca com você 24h</p>
   
-  <audio controls>
-    <source src="https://stream.zeno.fm/0ctt516rnhovv" type="audio/mpeg">
-    Teu navegador não suporta áudio.
+  <audio controls autoplay>
+    <source src="http://82.145.41.50:7597/stream" type="audio/mpeg">
+    Seu navegador não suporta o player.
   </audio>
-  
 </body>
 </html>
