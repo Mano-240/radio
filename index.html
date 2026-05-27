@@ -1,54 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mano Show</title>
-  <link rel="manifest" href="manifest.json">
-  <style>
-    body {
-      background: #0d0d0d;
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 20px;
-      margin: 0;
-    }
-    .logo {
-      width: 180px;
-      height: 180px;
-      border-radius: 25px;
-      margin: 30px auto 10px;
-      box-shadow: 0 0 25px #00ff88;
-    }
-    h1 {
-      font-size: 2.8rem;
-      margin: 10px 0;
-      color: #00ff88;
-      text-shadow: 0 0 10px #00ff88;
-    }
-    audio {
-      width: 100%;
-      max-width: 400px;
-      margin-top: 25px;
-      border-radius: 50px;
-    }
- .logo {
-  width: 180px;
-  height: 180px;
-  border-radius: 25px;
-  margin: 30px auto 10px;
-  box-shadow: 0 0 25px #00ff88;
-} </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rádio Mano Show</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        .logo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            object-fit: cover;
+            border: 3px solid #fff;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 10px 0;
+        }
+        p {
+            font-size: 1.2em;
+            margin: 10px 0 20px 0;
+        }
+    </style>
 </head>
 <body>
-  <img src="logo.png" alt="Mano Show" class="logo">
-  <h1>MANO SHOW</h1>
-  <p>A rádio que toca com você 24h</p>
-  
-  <audio controls autoplay>
-    <source src="http://82.145.41.50:7597/stream" type="audio/mpeg">
-    Seu navegador não suporta o player.
-  </audio>
+    <img src="logo.png" alt="Mano Show" class="logo">
+    <h1>MANO SHOW</h1>
+    <p>A rádio que toca com você 24h</p>
+
+    <audio controls autoplay style="width: 90%; max-width: 400px; margin-top: 30px; border-radius: 50px;">
+        <source src="https://stream-175.zeno.fm/0ctt516rnhovv" type="audio/mpeg">
+        Seu navegador não suporta o player.
+    </audio>
 </body>
 </html>
