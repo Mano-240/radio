@@ -4,69 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rádio Mano Show - Ao Vivo</title>
-    <link rel="icon" href="icon-192.png">
     <style>
-        body { 
-            background: #000; 
-            color: #fff; 
-            font-family: Arial, sans-serif; 
-            text-align: center; 
-            margin: 0; 
-            padding: 20px; 
+        body {
+            background: #0a0a0a;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
         }
-        .logo { 
-            width: 180px; 
-            height: 180px; 
-            margin: 15px 0; 
-            border-radius: 10px;
-        }
-        h1 { 
-            color: #ffbb00; 
-            font-size: 28px; 
-            margin: 15px 0; 
-        }
-        audio { 
-            width: 90%; 
-            max-width: 400px; 
-            margin: 20px auto; 
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 20px auto;
             display: block;
         }
+        h1 {
+            color: #FF6B00;
+            margin: 10px 0;
+            font-size: 28px;
+        }
         p {
+            color: #ccc;
             font-size: 16px;
-            margin: 10px 0;1
+        }
+        audio {
+            width: 100%;
+            max-width: 400px;
+            margin: 30px 0;
+        }
+        .play-text {
+            color: #FF6B00;
+            font-weight: bold;
+            font-size: 18px;
+            margin: 20px 0;
         }
     </style>
 </head>
 <body>
     <img class="logo" src="icon-512.png" alt="Rádio Mano Show">
+    
     <h1>MANO SHOW - AO VIVO</h1>
-        <!-- Banner RadiosNet -->
-    <div style="margin: 15px 0;">
-        <a href="https://www.radios.com.br/aovivo" target="_blank">
-            <img src="https://www.radios.com.br/imagens/banners/radiosnet-200x100.gif" 
-                 alt="Ouça a Mano Show Radio no RadiosNet" 
-                 style="border:0; border-radius: 5px;">
+    <p>Direto de Blumenau para todo Vale do Itajaí</p>
+
+    <audio controls autoplay>
+        <source src="https://stream-175.zeno.fm/0ctt516rmnhvv" type="audio/mpeg">
+        Seu navegador não suporta áudio. Acesse direto: https://stream-175.zeno.fm/0ctt516rmnhvv
+    </audio>
+
+    <p class="play-text">👉 CLICA NO PLAY PRA TOCAR 🔊</p>
+
+    <!-- Banner RadiosNet Oficial da Mano Show -->
+    <div style="text-align: center; padding: 20px 0; margin-top: 40px;">
+        <a href="https://www.radios.com.br/aovivo/radio-mano-show/286882" target="_blank">
+            <img src="https://mg.radios.com.br/divulgue/banner/2025/234x60@2x.png" 
+                 alt="Ouça a Rádio Mano Show no RadiosNet" 
+                 style="border: 0; max-width: 100%; height: auto;">
         </a>
     </div>
-    <p>Direto de Blumenau para todo Vale do Itajaí</p>
-    
-    <audio controls>
-        <source src="https://stream-175.zeno.fm/0ctt516rnhovv" type="audio/mpeg">
-        Seu navegador não suporta áudio. Acesse direto: https://stream-175.zeno.fm/0ctt516rnhovv
-    </audio>
-    
-    <p><strong>👉 CLICA NO PLAY PRA TOCAR 👈</strong></p>
 
-    <!-- Banner RadiosNet - Obrigatório pra aprovação rápida -->
-    <div style="text-align:center; padding:20px 0; margin-top:40px; background:#0a0a0a; border-top:1px solid #222;">
-      <a href="https://www.radios.com.br" target="_blank">
-        <img src="https://www.radios.com.br/imagens/banner-radiosnet-88x31.gif" 
-             alt="RadiosNet - Ouça rádios online" 
-             width="88" height="31" style="border:0;">
-      </a>
-      <p style="color:#666; font-size:11px; margin:8px 0 0 0;">
-        Ouça também no RadiosNet
-      </p>
-    </div>
 </body>
 </html>
