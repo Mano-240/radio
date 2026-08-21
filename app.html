@@ -5,30 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>WEB RÁDIO MANO SHOW</title>
 <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#00E5FF">
 <style>
-body{background:#000;color:#fff;font-family:Arial;text-align:center;margin:0;min-height:100vh;display:flex;flex-direction:column}
-.top{background:#111;padding:12px;color:#00E5FF;border-bottom:2px solid #00E5FF;font-weight:bold}
-.meio{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:20px}
-.logo{width:85%;max-width:340px;border-radius:20px;box-shadow:0 0 30px cyan}
-#btn{padding:20px 70px;border-radius:50px;border:0;font-size:26px;font-weight:900;background:linear-gradient(90deg,#00E5FF,#00FF88);cursor:pointer;margin-top:20px}
+body{margin:0;background:#000;color:#fff;font-family:Arial;text-align:center}
+.logo{width:220px;margin-top:30px;border-radius:20px;box-shadow:0 0 20px #00E5FF}
+h1{color:#00E5FF}
+.player{background:#111;padding:20px;margin:20px;border-radius:20px}
+audio{width:100%;margin-top:10px}
+button{background:#00E5FF;color:#000;border:none;padding:15px 30px;font-size:18px;border-radius:30px;font-weight:bold;margin-top:15px}
 </style>
 </head>
 <body>
-<div class="top">🔴 WEB RÁDIO MANO SHOW - AO VIVO</div>
-<div class="meio">
-<img src="logo.png" style="width:85%;max-width:340px;border-radius:20px;box-shadow:0 0 30px cyan">
-<h3 id="status" style="color:#00FF88">Clique para ouvir</h3>
-<button id="btn" onclick="tocar()">▶️ TOCAR RÁDIO</button>
-<audio id="radio" src="https://stream.zeno.fm/0ctt516rnhovv"></audio>
+<img src="logo.png" class="logo">
+<h1>🔴 AO VIVO</h1>
+<h2>MANO SHOW</h2>
+<div class="player">
+<p>TOQUE PARA OUVIR:</p>
+<audio id="radio" controls autoplay>
+<source src="https://stream.zeno.fm/0ctt516rnhovv" type="audio/mpeg">
+</audio>
+<br>
+<button onclick="document.getElementById('radio').play()">▶️ TOCAR RÁDIO</button>
 </div>
-<script>
-let tocando=false;
-const r=document.getElementById('radio'), b=document.getElementById('btn'), s=document.getElementById('status');
-function tocar(){
- if(!tocando){ s.innerText="Conectando..."; r.play().then(()=>{tocando=true; b.innerText="⏸️ PAUSAR"; s.innerText="🔴 TOCANDO AO VIVO!"}).catch(()=>{s.innerText="Toque de novo!"}); }
- else{ r.pause(); tocando=false; b.innerText="▶️ TOCAR RÁDIO"; s.innerText="Pausado"; }
-}
-</script>
 </body>
 </html>
