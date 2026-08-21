@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "io.github.mano_240.twa",
+        "sha256_cert_fingerprints": ["F6:1C:AB:36:D5:A0:5B:DA:54:1C:E4:BC:94:89:81:2C:D8:AB:AC:6D:BC:77:3E:20:62:28:5D:FA:0E:E2:EA:0E"]
+      }
+    }]
