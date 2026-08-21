@@ -1,7 +1,34 @@
 <!DOCTYPE html>
-<html><body style="background:#000;color:#fff;text-align:center">
-<h2>MANO APP</h2>
-<img src="logo.png" style="width:90%;max-width:350px">
-<audio id="r" controls autoplay style="width:90%;margin-top:20px"></audio>
-<script>document.getElementById('r').src="https://stream.zeno.fm/0a6v8h3k8x8uv"</script>
-</body></html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WEB RÁDIO MANO SHOW</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#00E5FF">
+<style>
+body{background:#000;color:#fff;font-family:Arial;text-align:center;margin:0;min-height:100vh;display:flex;flex-direction:column}
+.top{background:#111;padding:12px;color:#00E5FF;border-bottom:2px solid #00E5FF;font-weight:bold}
+.meio{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:20px}
+.logo{width:85%;max-width:340px;border-radius:20px;box-shadow:0 0 30px cyan}
+#btn{padding:20px 70px;border-radius:50px;border:0;font-size:26px;font-weight:900;background:linear-gradient(90deg,#00E5FF,#00FF88);cursor:pointer;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="top">🔴 WEB RÁDIO MANO SHOW - AO VIVO</div>
+<div class="meio">
+<img src="logo.png" style="width:85%;max-width:340px;border-radius:20px;box-shadow:0 0 30px cyan">
+<h3 id="status" style="color:#00FF88">Clique para ouvir</h3>
+<button id="btn" onclick="tocar()">▶️ TOCAR RÁDIO</button>
+<audio id="radio" src="https://stream.zeno.fm/0ctt516rnhovv"></audio>
+</div>
+<script>
+let tocando=false;
+const r=document.getElementById('radio'), b=document.getElementById('btn'), s=document.getElementById('status');
+function tocar(){
+ if(!tocando){ s.innerText="Conectando..."; r.play().then(()=>{tocando=true; b.innerText="⏸️ PAUSAR"; s.innerText="🔴 TOCANDO AO VIVO!"}).catch(()=>{s.innerText="Toque de novo!"}); }
+ else{ r.pause(); tocando=false; b.innerText="▶️ TOCAR RÁDIO"; s.innerText="Pausado"; }
+}
+</script>
+</body>
+</html>
