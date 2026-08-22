@@ -2,26 +2,34 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>WEB RADIO MANO SHOW</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:radial-gradient(ellipse at top,#0a1931 0%,#0f2a5a 25%,#1a5a8d 60%,#2e90ff 100%);min-height:100vh;display:flex;flex-direction:column;align-items:center;font-family:Arial,sans-serif;color:white;text-align:center;padding:15px}
-.top{background:#ff2d55;padding:7px 16px;border-radius:20px;font-size:12px;font-weight:bold;margin-top:10px}
-.logo{width:100%;max-width:360px;margin-top:25px}
-.logo img{width:100%;display:block;filter:drop-shadow(0 10px 25px rgba(0,0,0,0.5));}
-h1{margin-top:18px;font-size:22px;font-weight:900;letter-spacing:1px}
-.play{margin-top:25px;width:100px;height:100px;background:white;border-radius:50%;border:none;font-size:40px;color:#0a84ff;box-shadow:0 0 0 10px rgba(255,255,255,0.12),0 10px 30px rgba(0,0,0,0.5)}
+body{background:radial-gradient(ellipse at top,#0a1931,#0f2a5a 25%,#1a5a8d 60%,#2e90ff);min-height:100vh;display:flex;flex-direction:column;align-items:center;color:white;font-family:Arial Black,Arial,sans-serif;text-align:center;padding:15px}
+.top{background:#ff2d55;padding:8px 18px;border-radius:20px;font-size:12px;font-weight:bold;margin-top:10px}
+.logo{width:90%;max-width:360px;margin-top:25px}
+.logo img{width:100%;display:block}
+h1{margin-top:18px;font-size:22px}
+.play{margin-top:25px;width:110px;height:110px;background:white;border-radius:50%;border:none;font-size:42px;color:#0a84ff;cursor:pointer}
 </style>
 </head>
 <body>
 <div class="top">● AO VIVO • BLUMENAU SC</div>
-<div class="logo">
-<img src="https://mano-240.github.io/radio/logo.png" alt="MANO SHOW">
-</div>
+<div class="logo"><img src="logo.png"></div>
 <h1>WEB RADIO MANO SHOW</h1>
-<button class="play" onclick="document.getElementById('audio').play()">▶</button>
-<p style="margin-top:10px;font-size:13px;opacity:0.8">Tocando agora - Ao vivo 24h</p>
-<audio id="audio" src="https://stream-175.zeno.fm/0ctt516rnhovv"></audio>
+<button class="play" id="btn" onclick="tocar()">▶</button>
+<p id="txt" style="margin-top:10px;font-family:Arial">Toque para ouvir</p>
+<audio id="radio" src="https://stream-175.zeno.fm/0ctt516rnhovv"></audio>
+<script>
+let t=false;
+function tocar(){
+const a=document.getElementById('radio');
+const b=document.getElementById('btn');
+const x=document.getElementById('txt');
+if(!t){a.play();b.innerHTML='||';x.innerHTML='Tocando ao vivo...';t=true}
+else{a.pause();b.innerHTML='▶';x.innerHTML='Pausado';t=false}
+}
+</script>
 </body>
 </html>
