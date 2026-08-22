@@ -1,35 +1,40 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>WEB RADIO MANO SHOW</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:radial-gradient(ellipse at top,#0a1931,#0f2a5a 25%,#1a5a8d 60%,#2e90ff);min-height:100vh;display:flex;flex-direction:column;align-items:center;color:white;font-family:Arial Black,Arial,sans-serif;text-align:center;padding:15px}
-.top{background:#ff2d55;padding:8px 18px;border-radius:20px;font-size:12px;font-weight:bold;margin-top:10px}
+body{background:radial-gradient(ellipse at top,#0a1931,#0f2a5a 25%,#1a5a8d 60%,#2e8b9e);min-height:100vh;color:white;text-align:center;font-family:Arial}
+.top{background:#ff2d55;padding:8px 18px;border-radius:20px;font-size:12px;display:inline-block;margin-top:25px}
 .logo{width:90%;max-width:360px;margin-top:25px}
 .logo img{width:100%;display:block}
 h1{margin-top:18px;font-size:22px}
-.play{margin-top:25px;width:110px;height:110px;background:white;border-radius:50%;border:none;font-size:42px;color:#0a84ff;cursor:pointer}
+.play{margin-top:25px;width:110px;height:110px;background:white;border-radius:50%;border:none;font-size:40px}
+#txt{margin-top:10px;font-family:Arial}
 </style>
 </head>
 <body>
-<div class="top">● AO VIVO • BLUMENAU SC</div>
+<div class="top">• AO VIVO • BLUMENAU SC</div>
 <div class="logo"><img src="logo.png"></div>
 <h1>WEB RADIO MANO SHOW</h1>
 <button class="play" id="btn" onclick="tocar()">▶</button>
-<p id="txt" style="margin-top:10px;font-family:Arial">Toque para ouvir</p>
-<audio id="radio" src="https://stream-175.zeno.fm/0ctt516rnhovv"></audio>
+<p id="txt">Toque para ouvir</p>
+<audio id="radio" src="https://stream-175.zeno.fm/0ctt516rnhovv" autoplay></audio>
 <script>
 let t=false;
 function tocar(){
-const a=document.getElementById('radio');
-const b=document.getElementById('btn');
-const x=document.getElementById('txt');
-if(!t){a.play();b.innerHTML='||';x.innerHTML='Tocando ao vivo...';t=true}
-else{a.pause();b.innerHTML='▶';x.innerHTML='Pausado';t=false}
+ let r=document.getElementById('radio');
+ let b=document.getElementById('btn');
+ let x=document.getElementById('txt');
+ if(!t){r.play();b.innerHTML="⏸️";x.innerHTML="Tocando ao vivo...";t=true}
+ else{r.pause();b.innerHTML="▶";x.innerHTML="Toque para ouvir";t=false}
 }
+window.addEventListener('load',()=>{
+ let r=document.getElementById('radio');
+ r.play().then(()=>{t=true;document.getElementById('btn').innerHTML="⏸️";document.getElementById('txt').innerHTML="Tocando ao vivo..."}).catch(()=>{});
+});
 </script>
 </body>
 </html>
