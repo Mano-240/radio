@@ -6,33 +6,22 @@
 <title>WEB RADIO MANO SHOW</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:radial-gradient(ellipse at top,#0a1931 0%,#0f2a5a 25%,#1a5ad8 60%,#2e90ff 100%);min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:15px;color:white;font-family:Arial,sans-serif}
-.badge{background:linear-gradient(90deg,#ff2d2d,#ff6b6b);padding:7px 16px;border-radius:20px;font-weight:900;font-size:12px;margin-top:35px;box-shadow:0 0 15px rgba(255,0,0,.6)}
-.logo{width:92%;max-width:360px;border-radius:20px;overflow:hidden;margin:20px 0 20px;box-shadow:0 0 25px rgba(0,200,255,.7),0 0 50px rgba(0,100,255,.4)}
-.logo img{width:100%;display:block}
-h1{font-size:22px;font-weight:900;margin-bottom:22px}
-.play{width:115px;height:115px;background:white;border-radius:50%;border:none;display:flex;align-items:center;justify-content:center;box-shadow:0 0 25px rgba(255,255,255,.7),0 0 50px rgba(0,150,255,.6);cursor:pointer;margin-bottom:15px}
-.play:active{transform:scale(0.95)}
-.status{font-size:13px;opacity:.9;margin-bottom:30px}
-.box{background:rgba(255,255,255,.92);border-radius:20px;padding:16px;width:92%;max-width:360px;display:flex;justify-content:space-around}
-.box a{text-decoration:none;color:#1a5ad8;font-weight:700;font-size:12px;display:flex;flex-direction:column;align-items:center;gap:5px}
-.ico{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;color:white}
-.wa{background:#25D366}.ig{background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5)}.web{background:#5aa9ff}
+body{background:radial-gradient(ellipse at top,#0a1931 0%,#0f2a5a 25%,#1a5a8d 60%,#2e90ff 100%);min-height:100vh;display:flex;flex-direction:column;align-items:center;font-family:Arial,sans-serif;color:white;text-align:center;padding:15px}
+.top{background:#ff2d55;padding:7px 16px;border-radius:20px;font-size:12px;font-weight:bold;margin-top:10px}
+.logo{width:100%;max-width:360px;margin-top:25px}
+.logo img{width:100%;display:block;filter:drop-shadow(0 10px 25px rgba(0,0,0,0.5));}
+h1{margin-top:18px;font-size:22px;font-weight:900;letter-spacing:1px}
+.play{margin-top:25px;width:100px;height:100px;background:white;border-radius:50%;border:none;font-size:40px;color:#0a84ff;box-shadow:0 0 0 10px rgba(255,255,255,0.12),0 10px 30px rgba(0,0,0,0.5)}
 </style>
 </head>
 <body>
-<div class="badge">● AO VIVO • BLUMENAU SC</div>
-<div class="logo"><img src="logo.png"></div>
-<h1>WEB RADIO MANO SHOW</h1>
-<button class="play" onclick="let a=document.getElementById('r');if(a.paused){a.play();document.getElementById('s').innerText='🔴 Ao Vivo Tocando'}else{a.pause();document.getElementById('s').innerText='Tocando agora • Ao vivo 24h'}">
-<svg width="48" height="48" viewBox="0 0 24 24" fill="#2e90ff"><path d="M8 5.14v14l11-7-11-7z"/></svg>
-</button>
-<div class="status" id="s">Tocando agora • Ao vivo 24h</div>
-<div class="box">
-<a href="https://wa.me/5547999999999"><div class="ico wa">W</div>WhatsApp</a>
-<a href="#"><div class="ico ig">I</div>Instagram</a>
-<a href="#"><div class="ico web">G</div>Website</a>
+<div class="top">● AO VIVO • BLUMENAU SC</div>
+<div class="logo">
+<img src="https://mano-240.github.io/radio/logo.png" alt="MANO SHOW">
 </div>
-<audio id="r" src="https://stream.zeno.fm/0r0xa8x8v8zuv"></audio>
+<h1>WEB RADIO MANO SHOW</h1>
+<button class="play" onclick="document.getElementById('audio').play()">▶</button>
+<p style="margin-top:10px;font-size:13px;opacity:0.8">Tocando agora - Ao vivo 24h</p>
+<audio id="audio" src="https://stream-175.zeno.fm/0ctt516rnhovv"></audio>
 </body>
 </html>
