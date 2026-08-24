@@ -1,45 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Web Rádio Mano Show - Blumenau SC</title>
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#0a3cff">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MANO Web Rádio</title>
 <style>
-body{margin:0;background:#0a2a8a;color:#fff;font-family:Arial,sans-serif;text-align:center}
-.live{background:#ff0000;padding:6px 18px;border-radius:20px;font-weight:bold;font-size:13px;letter-spacing:1px}
-.box{background:#fff;max-width:360px;margin:25px auto;padding:25px;border-radius:24px;color:#111;box-shadow:0 10px 30px rgba(0,0,0,0.3)}
-.play{width:110px;height:110px;border-radius:50%;border:0;font-size:45px;background:#0a3cff;color:#fff;cursor:pointer;box-shadow:0 5px 15px rgba(10,60,255,0.4)}
-.btns{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:16px;max-width:380px;margin:auto}
-.btns a{padding:16px;border-radius:14px;color:#fff;text-decoration:none;font-weight:bold;font-size:14px}
-.wpp{background:#25D366}.face{background:#1877F2}.insta{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}.yt{background:#FF0000}.tk{background:#000}.chat{background:#fff;color:#0a2a8a !important}
+body{margin:0;background:#0d6efd;text-align:center;color:white;font-family:Arial;padding:0}
+.topo{background:red;padding:6px 15px;border-radius:20px;display:inline-block;margin:15px auto;font-weight:bold}
+.logo{width:260px;max-width:85%;margin:10px auto;display:block;border-radius:25px}
+.player{background:white;color:black;width:88%;max-width:360px;margin:15px auto;border-radius:25px;padding:20px}
+.play{width:90px;height:90px;background:#00bfff;border-radius:50%;border:none;font-size:40px;color:white;margin:10px auto;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.botoes{width:88%;max-width:360px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.botoes a{padding:14px;border-radius:25px;text-decoration:none;color:white;font-weight:bold;font-size:14px;display:block}
+.wpp{background:#25D366} .chat{background:#fff;color:#000!important} .face{background:#00c6ff} .insta{background:#ff7eb3} .yt{background:#ff3b30} .tt{background:#000}
 </style>
 </head>
 <body>
-<br><span class="live">• AO VIVO DIRETO DE BLUMENAU •</span>
-<div class="box">
-<h2 style="margin:0 0 15px 0">MANO SHOW</h2>
-<button class="play" onclick="play()">▶️</button>
-<p id="st" style="margin-top:15px;font-weight:bold">Toque para ouvir</p>
-<audio id="rd" src="https://stream-175.zeno.fm/0ctt516rnhovv"></audio>
+<div class="topo">🔴 AO VIVO DIRETO DE BLUMENAU</div>
+<img src="logo.png" class="logo">
+<div class="player">
+<h3 style="margin:5px">MANO SHOW</h3>
+<button class="play" onclick="document.getElementById('a').play()">▶️</button>
+<p>Toque para ouvir</p>
+<audio id="a" controls style="width:100%">
+<source src="https://stream-175.zeno.fm/0ctt516rnhovv" type="audio/mpeg">
+</audio>
 </div>
-<div class="btns">
-<a class="wpp" href="https://wa.me/5547991452690?text=Oi%20Mano%20Show%20to%20ouvindo%20a%20radio%20no%20app">📱 WHATSAPP</a>
-<a class="chat" href="https://wa.me/5547991452690">💬 CHAT AO VIVO</a>
-<a class="face" href="https://www.facebook.com/profile.php?id=61593182983247&locale=pt_BR" target="_blank">FACEBOOK</a>
-<a class="insta" href="https://www.instagram.com/manoshow.oficial" target="_blank">INSTAGRAM</a>
-<a class="yt" href="https://www.youtube.com/@WebR%C3%A1dioManoshow" target="_blank">YOUTUBE</a>
-<a class="tk" href="https://www.tiktok.com/@manoshowwebradio" target="_blank">TIKTOK</a>
+<div class="botoes">
+<a class="wpp" href="#">WHATSAPP</a>
+<a class="chat" href="#">CHAT AO VIVO</a>
+<a class="face" href="#">FACEBOOK</a>
+<a class="insta" href="#">INSTAGRAM</a>
+<a class="yt" href="#">YOUTUBE</a>
+<a class="tt" href="#">TIKTOK</a>
 </div>
-<p style="font-size:12px;opacity:0.7;padding:20px">www.mano-240.github.io/radio - Blumenau SC</p>
-<script>
-let t=false;
-function play(){
- let a=document.getElementById('rd'),s=document.getElementById('st');
- if(!t){a.play();s.innerText='Tocando ao vivo de Blumenau...';t=true}
- else{a.pause();s.innerText='Toque para ouvir';t=false}
-}
-</script>
 </body>
 </html>
